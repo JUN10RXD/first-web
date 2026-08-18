@@ -1,0 +1,191 @@
+
+/* =========================================
+   ANIMACIÓN DE ENTRADA
+========================================= */
+
+.social-button {
+    opacity: 0;
+
+    animation:
+        fadeUp .7s ease forwards;
+}
+
+.social-button:nth-child(1) {
+    animation-delay: .1s;
+}
+
+.social-button:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.social-button:nth-child(3) {
+    animation-delay: .3s;
+}
+
+.social-button:nth-child(4) {
+    animation-delay: .4s;
+}
+
+
+
+/* =========================================
+   COLORES AL PASAR EL MOUSE
+========================================= */
+
+.social-button.whatsapp:hover
+.social-icon {
+    background: #25D366;
+}
+
+.social-button.instagram:hover
+.social-icon {
+    background:
+        linear-gradient(
+            135deg,
+            #833AB4,
+            #FD1D1D,
+            #FCAF45
+        );
+}
+
+.social-button.facebook:hover
+.social-icon {
+    background: #1877F2;
+}
+
+.social-button.email:hover
+.social-icon {
+    background: var(--primary);
+}
+
+
+/* =========================================
+   FLECHA
+========================================= */
+
+.social-arrow {
+    font-size: 25px;
+
+    color:
+        var(--primary);
+
+    transition:
+        transform .3s ease;
+}
+
+.social-button:hover .social-arrow {
+    transform:
+        translateX(6px);
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.social-text {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    flex: 1;
+}
+
+.social-text strong {
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+.social-text span {
+    color:
+        var(--text-light);
+
+    font-size: 14px;
+}
+
+/* ================================
+   CÍRCULO
+================================ */
+
+.shape-one {
+    position: absolute;
+
+    width: min(40vw, 520px);
+
+    height: min(40vw, 520px);
+
+    right: 5%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    z-index: 1;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding-top: 80px;
+    padding-left: 8%;
+    padding-right: 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+.hero-content {
+    width: 100%;
+
+    max-width: 800px;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* Logo */
+
+.logo {
+    flex-shrink: 0;
+}
+
+/* =========================================
+   SELECCIÓN DE TEXTO
+========================================= */
+
+::selection {
+    background: #d97757;
+
+    color: white;
+}
+
+/* =========================================
+   APARICIÓN AL CARGAR
+========================================= */
+
+.hero-content {
+    animation:
+        zoomIn .8s ease;
+}
+
